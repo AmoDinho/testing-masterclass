@@ -1,7 +1,7 @@
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    plugings: [
+    plugins: [
         new htmlWebpackPlugin({
             title: "Webpack starter"
         })
