@@ -1,0 +1,16 @@
+{
+  "name": "testing-masterclass",
+  "version": "1",
+  "description": "Exploring TDD for modern JS",
+  "main": "server.js",
+  "repository": "https://github.com/AmoDinho/testing-masterclass.git",
+  "author": "Amo Moloko",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
