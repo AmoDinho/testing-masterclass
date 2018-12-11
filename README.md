@@ -65,6 +65,9 @@ step 10
 
 update package.json
 
+```
+"start": "nodemon ---watch webpack-dev-server --exec \"webpack-dev-server --mode development\""
+```
 step 11
 
 add webpack merge
@@ -77,9 +80,65 @@ step 12
 
 create a webpack.parts.js add the following to it: 
 
+
+```
+exports.devServer = ({host,port} = {}) => ({
+    devServer: {
+        stats: "errors-only",
+        host,
+        port,
+        open:true,
+        overlay:true
+    },
+});
+```
 step 13 
 
 then update your webpack.config.js to look like this: 
 
+```
 
+const htmlWebpackPlugin = require("html-webpack-plugin");
+const merge = require("webpack-merge");
 
+const parts = require("./webpack.parts");
+
+const commonConfig = merge([
+    {
+        plugins: [
+            new htmlWebpackPlugin({
+                title: "Webpack starter"
+            })
+        ]
+    }
+]);
+
+const productionConfig = merge([]);
+
+const developmentConfig = merge([
+    parts.devServer({
+        host:process.env.HOST,
+        port: process.env.PORT,
+    }),
+]);
+
+module.exports = mode => {
+   if(mode === "production"){
+       return merge(commonConfig,productionConfig,{mode});
+   }
+
+   return merge(commonConfig,developmentConfig,{mode});
+};
+
+```
+
+step 14 
+
+Update package.json:
+
+```
+"start": "nodemon ---watch webpack-dev-server --exec \"webpack-dev-server --env development\"",
+
+    "build": "webpack --env.target production"
+
+``
