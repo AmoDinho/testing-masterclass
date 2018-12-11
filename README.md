@@ -1,6 +1,12 @@
 # testing-masterclass
 This repo covers how to approach TDD for modern front-end Javascript apps.
 
+This might seem all over the place what this is how we are going to do it:
+
+* create webpack config from scratch.
+* Install React and Vue.
+* create simple unit tests for both. 
+
 Step 1
 
 run ```yarn init```
@@ -48,4 +54,32 @@ and your webpack dev server should be running.
 part II
 
 step 9
+
+add nodemon
+
+```
+yarn add nodemone --dev
+```
+
+step 10
+
+update package.json
+
+step 11
+
+add webpack merge
+
+```
+yarn add webpack-merge --dev
+```
+
+step 12
+
+create a webpack.parts.js add the following to it: 
+
+step 13 
+
+then update your webpack.config.js to look like this: 
+
+
 
