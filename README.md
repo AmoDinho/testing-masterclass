@@ -38,3 +38,14 @@ add the following :
 step 7
 
 add the following scripts to your package.json
+
+step 8
+
+run: ```yarn run```
+
+and your webpack dev server should be running.
+
+part II
+
+step 9
+
