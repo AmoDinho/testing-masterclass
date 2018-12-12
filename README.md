@@ -4,8 +4,9 @@ This repo covers how to approach TDD for modern front-end Javascript apps.
 This might seem all over the place what this is how we are going to do it:
 
 * create webpack config from scratch.
-* Install React and Vue.
-* create simple unit tests for both. 
+* Install React.
+* Create a simple Use Case to interact with the Root Insurance API.
+* create simple unit tests. 
 
 Step 1
 
