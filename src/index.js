@@ -1,3 +1,9 @@
-import component from "./component";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-document.body.appendChild(component());
+const Index = () => {
+    return <App />;
+};
+
+ReactDOM.render(<Index />, document.getElementById("app"));
