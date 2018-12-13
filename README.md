@@ -142,4 +142,21 @@ Update package.json:
 
     "build": "webpack --env.target production"
 
-``
+```
+
+Part III
+
+step 15
+
+Install the following packages:
+
+```
+yarn add react react-dom babel-core babel-eslint babel-loader babel-plugin-transform-class-properties babel-preset-env babel-preset-react css-loader
+```
+step 16 
+
+```
+yarn add  eslint
+
+
+```
